@@ -6,7 +6,7 @@ class SchedulerShould {
 
     @Test
     void update_schedule_item() throws SchedulingException {
-        Scheduler scheduler = new Scheduler();
+        AbstractScheduler scheduler = new TestableScheduler();
         scheduler.updateScheduleItem(new ScheduleItem());
     }
 }
