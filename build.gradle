@@ -11,6 +11,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'javax.servlet:servlet-api:2.5'
     testImplementation 'org.assertj:assertj-core:3.21.0'
     testImplementation 'org.mockito:mockito-core:4.1.0'
     testImplementation 'org.mockito:mockito-junit-jupiter:4.1.0'

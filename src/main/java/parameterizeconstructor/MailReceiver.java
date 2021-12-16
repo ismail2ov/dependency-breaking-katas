@@ -1,0 +1,5 @@
+package parameterizeconstructor;
+
+interface MailReceiver {
+
+}
