@@ -2,12 +2,17 @@ package extractandoverridefactorymethod;
 
 public class WorkflowEngine {
 
-    private final TransactionManager tm;
+    private TransactionManager tm;
 
     public WorkflowEngine() {
+        tm = createTransactionManager();
+    }
+
+    protected TransactionManager createTransactionManager() {
+        final TransactionManager tm;
         Reader reader = new ModelReader(AppConfig.getDryConfiguration());
         Persister persister = new XMLStore(AppConfiguration.getDryConfiguration());
 
-        this.tm = new TransactionManager(reader, persister);
+        return new TransactionManager(reader, persister);
     }
 }
