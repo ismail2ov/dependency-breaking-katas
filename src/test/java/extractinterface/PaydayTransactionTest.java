@@ -21,7 +21,7 @@ class PaydayTransactionTest {
         return new PayrollDatabase();
     }
 
-    private TransactionLog getTransactionLog() {
-        return new TransactionLog();
+    private TransactionRecorder getTransactionLog() {
+        return new FakeTransactionLog();
     }
 }

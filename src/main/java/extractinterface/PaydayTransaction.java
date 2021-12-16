@@ -2,9 +2,9 @@ package extractinterface;
 
 public class PaydayTransaction implements Transaction {
     private PayrollDatabase database;
-    private TransactionLog log;
+    private TransactionRecorder log;
 
-    public PaydayTransaction(PayrollDatabase database, TransactionLog log) {
+    public PaydayTransaction(PayrollDatabase database, TransactionRecorder log) {
         this.database = database;
         this.log = log;
     }
