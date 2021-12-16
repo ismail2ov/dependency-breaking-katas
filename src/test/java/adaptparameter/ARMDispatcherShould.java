@@ -6,7 +6,8 @@ class ARMDispatcherShould {
 
     @Test
     void populate() {
-        ARMDispatcher dispatcher = new ARMDispatcher();
-        dispatcher.populate(request);
+        ARMDispatcher dispatcher = new ARMDispatcher(new MarketBinding(), "");
+        ParameterSource source = new FakeParameterSource();
+        dispatcher.populate(source);
     }
 }

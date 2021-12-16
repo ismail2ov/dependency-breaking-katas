@@ -1,16 +1,17 @@
 package adaptparameter;
 
-import javax.servlet.http.HttpServletRequest;
+import lombok.Value;
 
+@Value
 public class ARMDispatcher {
+    MarketBinding marketBindings;
+    String pageStateName;
 
-    private String pageStateName;
-    private MarketBinding marketBindings;
 
-    public void populate(HttpServletRequest request) {
-        String[] values = request.getParameterValues(pageStateName);
-        if (values != null && values.length > 0) {
-            marketBindings.put(pageStateName + getDateStamp(), values[0]);
+    public void populate(ParameterSource source) {
+        String value = source.getParameterForName(pageStateName);
+        if (value != null) {
+            marketBindings.put(pageStateName + getDateStamp(), value);
         }
     }
 
