@@ -7,4 +7,9 @@ public class MailChecker {
         this.mailServer = new SmtpMailServer();
         this.mailServer.setup();
     }
+
+    public void setupMail(MailServer mailServer) {
+        this.mailServer = mailServer;
+        this.mailServer.setup();
+    }
 }
