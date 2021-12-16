@@ -9,6 +9,10 @@ public class PageLayout {
     private StyleTemplate template;
 
     protected void rebindStyles() {
-        styles = StyleMaster.formStyles(template, id);
+        styles = getFormStyles();
+    }
+
+    protected List getFormStyles() {
+        return StyleMaster.formStyles(template, id);
     }
 }
