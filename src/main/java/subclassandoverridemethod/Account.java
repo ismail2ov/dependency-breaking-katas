@@ -47,7 +47,7 @@ public class Account {
         lastTransactionDate = date;
     }
 
-    private Date getDate() {
+    protected Date getDate() {
         Calendar calendar = Calendar.getInstance();
         return calendar.getTime();
     }
