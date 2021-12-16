@@ -8,4 +8,9 @@ public class MailChecker {
         this.receiver = new SmtpMailReceiver();
         this.checkPeriodSeconds = checkPeriodSeconds;
     }
+
+    public MailChecker(MailReceiver mailReceiver, int checkPeriodSeconds) {
+        receiver = mailReceiver;
+        this.checkPeriodSeconds = checkPeriodSeconds;
+    }
 }
